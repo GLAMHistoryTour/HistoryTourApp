@@ -1,0 +1,16 @@
+{
+    "tours": [
+        {
+            "name": "braun",
+            "url": "braun.json",
+            "title": "Auf den Spuren von Adolphe Braun",
+            "imageUrl": ""
+        },
+        {
+            "name": "seidenstrasse",
+            "url": "seidenstrasse.json",
+            "title": "Zürcher Seidenstrasse",
+            "imageUrl": ""
+        }
+]
+}
