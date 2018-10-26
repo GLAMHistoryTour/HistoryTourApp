@@ -1,0 +1,25 @@
+#camera-input{
+    position: absolute;
+    z-index: 100;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 101;
+    opacity: 0.5;
+}
+
+#main-container
+{
+    float: left;
+}
+
+#captured-image
+{
+    position: absolute;
+}
+
+#slider-opacity
+{
+    width: 500px;
+}
