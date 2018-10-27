@@ -45,7 +45,7 @@ function startTracking() {
 function initPosition(e){
     var radius = Math.round(e.coords.accuracy / 2);
     var coord = L.latLng(e.coords.latitude, e.coords.longitude);
-    me = L.circleMarker(coord).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
+    me = L.circleMarker(coord).addTo(map).bindPopup("You are within " + radius + " meters from this point");
     me_radius =  L.circle(coord, radius).addTo(map);
     map.panTo(coord);
 }
