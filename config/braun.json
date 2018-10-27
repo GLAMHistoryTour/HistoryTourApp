@@ -4,14 +4,14 @@
             "name":"First Place",
             "imageUrl": "",
             "latitute": "47.3",
-            "longitude": "8.5",
+            "longitude": "8.531",
             "description": ""
         },
         {
             "name":"Second Place",
             "imageUrl": "",
             "latitute": "47.4",
-            "longitude": "8.6",
+            "longitude": "8.531",
             "description": ""
         }
     ]
