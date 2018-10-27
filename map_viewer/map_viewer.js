@@ -77,7 +77,7 @@ function compareDistance(coord){
             found = true;
             element.on('click', function(e){
                 console.log('whoot');
-                window.location = "../ar_viewer/ar_viewer.html?imageLink="+element.alt;
+                window.location = "../ar_viewer/ar_viewer.html?json="+findGetParameter('json')+"&step="+element.step_nr;
             });
         } else {
             element.off('click');
@@ -97,17 +97,18 @@ function loadTour(jsonPath) {
     }
     points = new Array();
 
-    path = "../config/" + jsonPath;
+    var path = "../config/" + jsonPath;
     var request = new XMLHttpRequest();
     request.open("GET", path, false);
     request.send(null);
 
    var markers = JSON.parse(request.responseText).steps;
 
-    markers.forEach(function(element){
+    markers.forEach(function(element,i){
         var marker = L.marker([element.latitute, element.longitude]).addTo(map);
         marker.bindPopup(element.name);
         marker.alt =  element.imageUrl;
+        marker.step_nr = i;
         marker.interactive = true;
         points.push(marker);
     });

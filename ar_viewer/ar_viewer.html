@@ -10,19 +10,19 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2">
+            <div class="col-3">
                 <p class="text-right">Historic</p>
             </div>
-            <div class="col-8">
+            <div class="col-6">
                 <input id="slider-opacity" type="range" />
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <p>Now</p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div id="absolute-wrapper">
+                <div class="absolute-wrapper">
                     <div id="life-view">
                         <img height="auto" class="overlay">
                         <video height="auto" controls autoplay id="camera-input">
@@ -37,9 +37,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="info-content">
             <div class="col-sm-12">
-                <p>This is infotext</p>
+                <p id="info-text"></p>
             </div>
         </div>
         <nav class="navbar fixed-bottom navbar-light bg-light">

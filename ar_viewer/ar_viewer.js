@@ -1,7 +1,9 @@
 // Prefer camera resolution nearest to 1280x720.
 var constraints = {
     audio: false,
-    video:  {facingMode: "environment"}
+    video: {
+        facingMode: "environment"
+    }
 };
 
 navigator.mediaDevices.getUserMedia(constraints)
@@ -10,7 +12,11 @@ navigator.mediaDevices.getUserMedia(constraints)
         video.srcObject = mediaStream;
         video.onloadedmetadata = function (e) {
             video.play();
+            var absoluteWrapper = document.querySelector('.absolute-wrapper');
+            var infoContent = document.querySelector('#info-content');
+            infoContent.style.marginTop = video.offsetHeight + video.offsetTop + "px";
         };
+
     })
     .catch(function (err) {
         console.log(err.name + ": " + err.message);
@@ -18,9 +24,17 @@ navigator.mediaDevices.getUserMedia(constraints)
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search);
     var overlayImage = document.querySelectorAll('.overlay');
+    var jsonPath = urlParams.get('json');
+    var request = new XMLHttpRequest();
+    request.open("GET", "../config/" + jsonPath, false);
+    request.send(null);
+    var jsonData = JSON.parse(request.responseText);
+    var currentStep = jsonData.steps[urlParams.get('step')];
     overlayImage.forEach(function (element) {
-            element.src = urlParams.get('imageLink');
+        element.src = currentStep.imageUrl;
     });
+    var infoText = document.querySelector('#info-text');
+    infoText.innerHTML = currentStep.description;
     var screenshotButton = document.querySelector('#btn-capture');
     var liveButton = document.querySelector('#btn-live');
     var opacitySlider = document.querySelector('#slider-opacity');
@@ -30,8 +44,8 @@ window.onload = function () {
         var img = document.querySelector('#captured-image');
         var lifeViewContainer = document.querySelector('#life-view');
         var capturedImageContainer = document.querySelector('#captured-view');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
+        canvas.width = video.offsetWidth;
+        canvas.height = video.offsetHeight;
         canvas.getContext('2d').drawImage(video, 0, 0);
         img.width = video.offsetWidth;
         img.height = video.offsetHeight;
@@ -39,7 +53,7 @@ window.onload = function () {
         capturedImageContainer.style.display = 'initial';
         lifeViewContainer.style.display = 'none';
     };
-    
+
     liveButton.onclick = function () {
         var lifeViewContainer = document.querySelector('#life-view');
         var capturedImageContainer = document.querySelector('#captured-view');
@@ -50,7 +64,7 @@ window.onload = function () {
     opacitySlider.oninput = function () {
         var overlayImage = document.querySelectorAll('.overlay');
         overlayImage.forEach(function (element) {
-            element.style.opacity = 1-(opacitySlider.value / 100);
+            element.style.opacity = 1 - (opacitySlider.value / 100);
         });
     };
 }
