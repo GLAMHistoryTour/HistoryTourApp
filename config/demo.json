@@ -1,0 +1,14 @@
+{
+    "imageUrl": "../img/landesmuseum.jpg",
+    "title": "Demo Tour",
+    "description": "This is a small tour to show our app works",
+    "steps": [
+        {
+            "name": "Landesmuseum",
+            "imageUrl": "../img/seidenTour/landesmuseum.jpeg",
+            "latitute": "47.379490",
+            "longitude": "8.540246",
+            "description": "The Landesmuseum"
+        }
+    ]
+}
