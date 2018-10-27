@@ -3,6 +3,7 @@ var error_msg;
 var map;
 var me;
 var me_radius;
+var locDet;
 var me_radius_shown = true;
 
 window.onload = function () {
@@ -12,7 +13,9 @@ window.onload = function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     
+
     error_msg = document.getElementById("no-navi");
+    locDet = document.getElementById("buzz");
     var tour = findGetParameter('json');
     if(tour != null){
         loadTour(tour);   
@@ -72,15 +75,22 @@ function updatePosition(e) {
 }
 
 function compareDistance(coord){
+    var found = false;
     points.forEach(function(element){
         var dist = coord.distanceTo(element.getLatLng());
         console.log(dist);
         //TODO get dist from json
         if(dist < 10){
             console.log('bzzzz');
-            window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
+            found = true;
+            locDet.innerHTML = "BZZ";
+            window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);    
         }
     });
+    if(!found){
+
+            locDet.innerHTML = "";
+    }
     //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
 }
 
