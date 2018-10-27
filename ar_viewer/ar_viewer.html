@@ -4,15 +4,16 @@
     <script src="ar_viewer.js"></script>
     <link rel="stylesheet" type="text/css" href="ar_viewer.css">
     <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="main-container">
         <input id="slider-opacity" type="range" />
-        <button id="btn-capture">Take Picture</button>
-        <button id="btn-live">Live</button>
+        <button id="btn-capture" class="btn">Take Picture</button>
+        <button id="btn-live" class="btn">Live</button>
         <div id="life-view">
-            <img src="https://opac.nebis.ch/exlibris/aleph/u23_1/apache_media/1YPJCISRS1R2KSG6FVEXVMQEBTI2YE.jpg" height="720" class="overlay">
+            <img height="720" class="overlay">
             <video height="720" controls autoplay id="camera-input">
         Your browser does not support the video tag.
         </video>
@@ -20,7 +21,7 @@
         <div id="captured-view" style="display: none;">
             <canvas style="display:none;"></canvas>
             <img id="captured-image">
-            <img src="https://opac.nebis.ch/exlibris/aleph/u23_1/apache_media/1YPJCISRS1R2KSG6FVEXVMQEBTI2YE.jpg" height="720" class="overlay">
+            <img height="720" class="overlay">
         </div>
     </div>
 </body>

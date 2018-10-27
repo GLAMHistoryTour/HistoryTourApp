@@ -20,6 +20,11 @@ navigator.mediaDevices.getUserMedia(constraints)
         console.log(err.name + ": " + err.message);
     }); // always check for errors at the end.
 window.onload = function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var overlayImage = document.querySelectorAll('.overlay');
+    overlayImage.forEach(function (element) {
+            element.src = urlParams.get('imageLink');
+    });
     var screenshotButton = document.querySelector('#btn-capture');
     var liveButton = document.querySelector('#btn-live');
     var opacitySlider = document.querySelector('#slider-opacity');
