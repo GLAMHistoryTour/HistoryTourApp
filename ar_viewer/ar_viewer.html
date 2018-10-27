@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="ar_viewer.js"></script>
     <link rel="stylesheet" type="text/css" href="ar_viewer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="imgur.js"></script>
+    <script src="ar_viewer.js"></script>
 </head>
 
 <body>
@@ -41,10 +42,12 @@
             <div class="col-sm-12">
                 <p id="info-text"></p>
             </div>
+            <label id="link"></label>
         </div>
         <nav class="navbar fixed-bottom navbar-light bg-light">
             <button id="btn-capture" class="btn">Take Picture</button>
-            <button id="btn-live" class="btn">Live</button>
+            <button id="btn-upload" class="btn" disabled>Upload Picture</button>
+            <button id="btn-live" class="btn" disabled>Retake Picture</button>
         </nav>
     </div>
 </body>
