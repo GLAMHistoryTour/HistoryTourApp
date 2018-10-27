@@ -1,4 +1,7 @@
 {
+    "imageUrl": "../img/braun.jpg",
+    "title": "Zürichs Seidenstrasse",
+    "description": "",
     "steps": [
         {
             "name":"First Place",
