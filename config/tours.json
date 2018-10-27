@@ -1,19 +1,22 @@
 {
     "tours": [
         {
-            "name": "braun",
-            "url": "braun.json",
-            "title": "Auf den Spuren von Adolphe Braun"
-        },
-        {
-            "name": "seidenstrasse",
-            "url": "seidenstrasse.json",
-            "title": "Zürcher Seidenstrasse"
-        },
-        {
-            "name": "Demo Tour",
             "url": "demo.json",
-            "title": "Demotour for Presentation"
+            "title": "Demotour",
+            "description": "Demotour for Presentation",
+            "time": "10 minutes"
+        },
+        {
+            "url": "braun.json",
+            "title": "Adolphe Braun",
+            "description": "Auf den Spuren von Adolphe Braun",
+            "time": "1 hour"
+        },
+        {
+            "url": "seidenstrasse.json",
+            "title": "Zürcher Seidenstrasse",
+            "description": "Auf den Spuren der Seidenbaronen",
+            "time": "1 hour"
         }
 ]
 }
