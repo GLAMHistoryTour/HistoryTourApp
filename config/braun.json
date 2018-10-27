@@ -4,17 +4,66 @@
     "description": "Der elsässische Fotograf und Textildesigner Jean Adolphe Braun (1812 – 1877) gründet 1862 in Dornach bei Mülhausen die Firma Braun & Cie, die sich auf Fotoproduktionen spezialisiert. Schon bald entdeckt die Firma das Geschäft mit den Touristen und produziert Ansichten von Schweizer Landschaften und Städten. Da die meisten Reisenden damals keine eigenen Fotoapparate besitzen, kaufen sie die Fotoabzüge vor Ort. Daheimgebliebene können über das europäische Verkaufsnetz der Firma Bilder bestellen. Das Schweizerische Nationalmuseum konnte kürzlich über 1500 Abzüge der damals äusserst populären Bilder für seine Sammlung erwerben.",
     "steps": [
         {
-            "name": "First Place",
-            "imageUrl": "",
-            "latitute": "47.3",
-            "longitude": "8.531",
+            "name": "St.Peter",
+            "imageUrl": "../img/Braun_Zürich/DIG-41344_LM-17093910.jpg",
+            "latitute": "47.371254",
+            "longitude": "8.540738",
             "description": ""
         },
         {
-            "name": "Second Place",
-            "imageUrl": "",
-            "latitute": "47.4",
-            "longitude": "8.531",
+            "name": "HB, bridge",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41348_LM-17093914.jpg",
+            "latitute": "47.376514",
+            "longitude": "8.543996",
+            "description": ""
+        },
+        {
+            "name": "HB",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41349_LM-17093915.jpg",
+            "latitute": "47.377347",
+            "longitude": "8.538523",
+            "description": ""
+        },
+        {
+            "name": "HB",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41350_LM-17093916.jpg",
+            "latitute": "47.376811",
+            "longitude": "8.541916",
+            "description": ""
+        },
+        {
+            "name": "from river bank",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41351_LM-17093917.jpg",
+            "latitute": "47.37092",
+            "longitude": "8.541905",
+            "description": ""
+        },
+        {
+            "name": "ETH",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41352_LM-17093918.jpg",
+            "latitute": "47.372927",
+            "longitude": "8.541385",
+            "description": ""
+        },
+        {
+            "name": "Quaibruecke",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "latitute": "47.367151",
+            "longitude": "8.543912",
+            "description": ""
+        },
+        {
+            "name": "Bauschänzli",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "latitute": "47.367728",
+            "longitude": "8.542461",
+            "description": ""
+        },
+        {
+            "name": "Hotel Storchen",
+            "imageUrl":  "../img/Braun_Zürich/DIG-41379_LM-1709398.jpg",
+            "latitute": "47.371568",
+            "longitude": "8.542007",
             "description": ""
         }
     ]
