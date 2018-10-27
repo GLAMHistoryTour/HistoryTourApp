@@ -1,8 +1,7 @@
 // Prefer camera resolution nearest to 1280x720.
 var constraints = {
     audio: false,
-    facingMode: "environment",
-    video: true
+    video:  {facingMode: "environment"}
 };
 
 navigator.mediaDevices.getUserMedia(constraints)
