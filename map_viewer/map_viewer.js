@@ -72,8 +72,7 @@ function compareDistance(coord) {
     points.forEach(function (element) {
         var dist = coord.distanceTo(element.getLatLng());
         console.log(dist);
-        //TODO get dist from json
-        if (dist < 10) {
+        if (dist < element.requested_radius) {
             found = true;
             element.on('click', function (e) {
                 console.log('whoot');
