@@ -1,19 +1,14 @@
 #camera-input{
     position: absolute;
     z-index: 100;
-    width: 100vw;
+    width: 100%;
 }
 
 .overlay{
     position: absolute;
     z-index: 101;
     opacity: 0.5;
-    width: 100vw;
-}
-
-#main-container
-{
-    float: left;
+    width: 100%;
 }
 
 #captured-image
@@ -23,5 +18,5 @@
 
 #slider-opacity
 {
-    width: 500px;
+    width: 100%;
 }

@@ -54,7 +54,7 @@ window.onload = function () {
     opacitySlider.oninput = function () {
         var overlayImage = document.querySelectorAll('.overlay');
         overlayImage.forEach(function (element) {
-            element.style.opacity = opacitySlider.value / 100;
+            element.style.opacity = 1-(opacitySlider.value / 100);
         });
     };
 }

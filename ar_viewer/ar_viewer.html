@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="ar_viewer.js"></script>
     <link rel="stylesheet" type="text/css" href="ar_viewer.css">
-    <link rel="manifest" href="manifest.json">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="main-container">
-        <input id="slider-opacity" type="range" />
-        <button id="btn-capture" class="btn">Take Picture</button>
-        <button id="btn-live" class="btn">Live</button>
-        <div id="life-view">
-            <img height="720" class="overlay">
-            <video height="720" controls autoplay id="camera-input">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <p>Historic</p>
+            </div>
+            <div class="col-8">
+                <input id="slider-opacity" type="range" />
+            </div>
+            <div class="col-2">
+                <p>Now</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="life-view">
+                    <img height="auto" class="overlay">
+                    <video height="auto" controls autoplay id="camera-input">
         Your browser does not support the video tag.
         </video>
+                </div>
+                <div id="captured-view" style="display: none;">
+                    <canvas style="display:none;"></canvas>
+                    <img id="captured-image">
+                    <img height="auto" class="overlay">
+                </div>
+            </div>
         </div>
-        <div id="captured-view" style="display: none;">
-            <canvas style="display:none;"></canvas>
-            <img id="captured-image">
-            <img height="720" class="overlay">
-        </div>
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <button id="btn-capture" class="btn">Take Picture</button>
+            <button id="btn-live" class="btn">Live</button>
+        </nav>
     </div>
 </body>
 </html>

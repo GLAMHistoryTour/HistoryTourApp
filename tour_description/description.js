@@ -4,7 +4,7 @@ window.onload = function () {
     request.open("GET", "../config/"+urlParams.get('json'), false);
     request.send(null);
     var tour = JSON.parse(request.responseText);
-    var tourTitle = document.createElement('h1');
+    var tourTitle = document.createElement('h3');
     tourTitle.innerHTML = tour.title;
     var image = document.createElement('img');
     image.classList.add("img-fluid");
