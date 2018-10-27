@@ -6,9 +6,9 @@
         {
             "name": "Landesmuseum",
             "imageUrl": "../img/seidenTour/landesmuseum.jpeg",
-            "latitute": "47.379490",
-            "longitude": "8.540246",
-            "requested_radius": 10,
+            "latitute": "47.37888889",
+            "longitude": "8.54055556",
+            "requested_radius": 20,
             "description": "The Landesmuseum"
         }
     ]
