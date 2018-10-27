@@ -2,10 +2,7 @@
 var constraints = {
     audio: false,
     facingMode: "environment",
-    video: {
-        width: 1280,
-        height: 720
-    }
+    video: true
 };
 
 navigator.mediaDevices.getUserMedia(constraints)
@@ -37,8 +34,8 @@ window.onload = function () {
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         canvas.getContext('2d').drawImage(video, 0, 0);
-        img.width = video.videoWidth;
-        img.height = video.videoHeight;
+        img.width = video.offsetWidth;
+        img.height = video.offsetHeight;
         img.src = canvas.toDataURL('image/webp');
         capturedImageContainer.style.display = 'initial';
         lifeViewContainer.style.display = 'none';
