@@ -5,10 +5,10 @@ window.onload = function () {
    var tours = JSON.parse(request.responseText).tours;
     tours.forEach(function(element){
         var link = document.createElement('a');
-        link.href = "tour_viewer/tour.html?json="+element.url;
+        link.href = "tour_description/description.html?json="+element.url;
+        link.classList.add("list-group-item");
+        link.classList.add("list-group-item-action");
         link.innerHTML = element.title;
-        var listItem = document.createElement('li');
-        listItem.appendChild(link);
-        document.querySelector('#project-list').appendChild(listItem);
+        document.querySelector('#project-list').appendChild(link);
     });
 }

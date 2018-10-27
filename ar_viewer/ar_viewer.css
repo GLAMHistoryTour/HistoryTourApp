@@ -1,12 +1,14 @@
 #camera-input{
     position: absolute;
     z-index: 100;
+    width: 100vw;
 }
 
 .overlay{
     position: absolute;
     z-index: 101;
     opacity: 0.5;
+    width: 100vw;
 }
 
 #main-container

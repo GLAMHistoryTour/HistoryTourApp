@@ -1,14 +1,17 @@
 {
+    "imageUrl": "../img/braun.jpg",
+    "title": "Auf den Spuren von Adolphe Braun",
+    "description": "Der elsässische Fotograf und Textildesigner Jean Adolphe Braun (1812 – 1877) gründet 1862 in Dornach bei Mülhausen die Firma Braun & Cie, die sich auf Fotoproduktionen spezialisiert. Schon bald entdeckt die Firma das Geschäft mit den Touristen und produziert Ansichten von Schweizer Landschaften und Städten. Da die meisten Reisenden damals keine eigenen Fotoapparate besitzen, kaufen sie die Fotoabzüge vor Ort. Daheimgebliebene können über das europäische Verkaufsnetz der Firma Bilder bestellen. Das Schweizerische Nationalmuseum konnte kürzlich über 1500 Abzüge der damals äusserst populären Bilder für seine Sammlung erwerben.",
     "steps": [
         {
-            "name":"First Place",
+            "name": "First Place",
             "imageUrl": "",
             "latitute": "47.3",
             "longitude": "8.531",
             "description": ""
         },
         {
-            "name":"Second Place",
+            "name": "Second Place",
             "imageUrl": "",
             "latitute": "47.4",
             "longitude": "8.531",
