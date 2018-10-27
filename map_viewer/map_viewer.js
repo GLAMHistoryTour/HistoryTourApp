@@ -3,11 +3,10 @@ var error_msg;
 var map;
 var me;
 var me_radius;
-var locDet;
 var me_radius_shown = true;
 
 window.onload = function () {
-    map = L.map('mapid').setView([47.3772429, 8.531449499999999], 15);
+    map = L.map('mapid').setView([47.3772429, 8.531449499999999], 17);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -15,7 +14,6 @@ window.onload = function () {
     
 
     error_msg = document.getElementById("no-navi");
-    locDet = document.getElementById("buzz");
     var tour = findGetParameter('json');
     if(tour != null){
         loadTour(tour);   
@@ -28,11 +26,6 @@ window.onload = function () {
         id: 'mapbox.streets',
         accessToken: 'your.mapbox.access.token'
     }).addTo(map);*/
-}
-
-function getLocation(){
-
-    navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);    
 }
 
 function startTracking() {
@@ -81,16 +74,18 @@ function compareDistance(coord){
         console.log(dist);
         //TODO get dist from json
         if(dist < 10){
-            console.log('bzzzz');
             found = true;
-            locDet.innerHTML = "BZZ";
-            window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);    
+            element.on('click', function(e){
+                console.log('whoot');
+                window.location = "../ar_viewer/ar_viewer.html?imageLink="+element.alt;
+            });
+        } else {
+            element.off('click');
         }
     });
-    if(!found){
-        locDet.innerHTML = "nothing found";
+    if(found){
+        navigator.vibrate([1000,1000,1000]);    
     }
-    //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
 }
 
 
@@ -112,6 +107,8 @@ function loadTour(jsonPath) {
     markers.forEach(function(element){
         var marker = L.marker([element.latitute, element.longitude]).addTo(map);
         marker.bindPopup(element.name);
+        marker.alt =  element.imageUrl;
+        marker.interactive = true;
         points.push(marker);
     });
 
