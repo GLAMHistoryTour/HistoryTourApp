@@ -1,22 +1,24 @@
-#camera-input{
+#camera-input {
     position: absolute;
     z-index: 100;
     width: 100%;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     z-index: 101;
     opacity: 0.5;
     width: 100%;
 }
 
-#captured-image
-{
+#captured-image {
     position: absolute;
 }
 
-#slider-opacity
-{
+#slider-opacity {
     width: 100%;
+}
+
+#absolute-wrapper {
+    position: relative;
 }
