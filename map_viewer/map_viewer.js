@@ -11,12 +11,12 @@ window.onload = function () {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    
+
 
     error_msg = document.getElementById("no-navi");
     var tour = findGetParameter('json');
-    if(tour != null){
-        loadTour(tour);   
+    if (tour != null) {
+        loadTour(tour);
     }
 
     startTracking();
@@ -37,16 +37,16 @@ function startTracking() {
 
         //watcher
         navigator.geolocation.watchPosition(updatePosition);
-    } else { 
+    } else {
         error_msg.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
-function initPosition(e){
+function initPosition(e) {
     var radius = Math.round(e.coords.accuracy / 2);
     var coord = L.latLng(e.coords.latitude, e.coords.longitude);
     me = L.circleMarker(coord).addTo(map).bindPopup("You are within " + radius + " meters from this point");
-    me_radius =  L.circle(coord, radius).addTo(map);
+    me_radius = L.circle(coord, radius).addTo(map);
     map.panTo(coord);
 }
 
@@ -55,10 +55,10 @@ function updatePosition(e) {
     var coord = L.latLng(e.coords.latitude, e.coords.longitude);
     me.setLatLng(coord);
     me.setPopupContent("You are within " + radius + " meters from this point");
-    if(radius<5){
+    if (radius < 5) {
         me_radius.remove();
         me_radius_shown = false;
-    } else if (!me_radius_shown){
+    } else if (!me_radius_shown) {
         me_radius.addTo(map);
     }
     me_radius.setLatLng(coord);
@@ -67,31 +67,31 @@ function updatePosition(e) {
     compareDistance(coord);
 }
 
-function compareDistance(coord){
+function compareDistance(coord) {
     var found = false;
-    points.forEach(function(element){
+    points.forEach(function (element) {
         var dist = coord.distanceTo(element.getLatLng());
         console.log(dist);
         //TODO get dist from json
-        if(dist < 10){
+        if (dist < 10) {
             found = true;
-            element.on('click', function(e){
+            element.on('click', function (e) {
                 console.log('whoot');
-                window.location = "../ar_viewer/ar_viewer.html?json="+findGetParameter('json')+"&step="+element.step_nr;
+                window.location = "../ar_viewer/ar_viewer.html?json=" + findGetParameter('json') + "&step=" + element.step_nr;
             });
         } else {
             element.off('click');
         }
     });
-    if(found){
-        navigator.vibrate([1000,1000,1000]);    
+    if (found) {
+        navigator.vibrate([1000, 1000, 1000]);
     }
 }
 
 
 function loadTour(jsonPath) {
-    if(points != null){
-        points.forEach(function(element){
+    if (points != null) {
+        points.forEach(function (element) {
             element.remove();
         });
     }
@@ -102,13 +102,18 @@ function loadTour(jsonPath) {
     request.open("GET", path, false);
     request.send(null);
 
-   var markers = JSON.parse(request.responseText).steps;
+    var markers = JSON.parse(request.responseText).steps;
 
-    markers.forEach(function(element,i){
+    markers.forEach(function (element, i) {
+        if (element.requested_radius == null) {
+            element.requested_radius = 10;
+        }
         var marker = L.marker([element.latitute, element.longitude]).addTo(map);
+        L.circle([element.latitute, element.longitude], element.requested_radius).addTo(map);
         marker.bindPopup(element.name);
-        marker.alt =  element.imageUrl;
+        marker.alt = element.imageUrl;
         marker.step_nr = i;
+        marker.requested_radius = element.requested_radius;
         marker.interactive = true;
         points.push(marker);
     });
@@ -119,8 +124,8 @@ function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
     location.search.substr(1).split("&").forEach(function (item) {
-          tmp = item.split("=");
-          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
+        tmp = item.split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    });
     return result;
 }
