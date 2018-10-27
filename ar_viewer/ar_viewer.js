@@ -44,8 +44,8 @@ window.onload = function () {
         var img = document.querySelector('#captured-image');
         var lifeViewContainer = document.querySelector('#life-view');
         var capturedImageContainer = document.querySelector('#captured-view');
-        canvas.width = video.offsetWidth;
-        canvas.height = video.offsetHeight;
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
         canvas.getContext('2d').drawImage(video, 0, 0);
         img.width = video.offsetWidth;
         img.height = video.offsetHeight;
