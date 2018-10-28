@@ -6,10 +6,12 @@
         {
             "name": "Landesmuseum",
             "imageUrl": "../img/seidenTour/landesmuseum.jpeg",
+            "metadata":"Breitling [Sammlung Landesmuseum]",
             "latitute": "47.37888889",
             "longitude": "8.54055556",
             "requested_radius": 20,
-            "description": "The Landesmuseum"
+            "description1": "The Landesmuseum",
+            "description2": "The Landesmuseum"
         }
     ]
 }

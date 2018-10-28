@@ -47,12 +47,12 @@ window.onload = function () {
         element.src = currentStep.imageUrl;
     });
     var infoText = document.querySelector('#info-text');
-    infoText.innerHTML = currentStep.description;
+    infoText.innerHTML = currentStep.description2;
 
     screenshotButton = document.querySelector('#btn-capture');
     screenshotButton.onclick = takeScreenshot;
 
-    liveButton = document.querySelector('#btn-live')
+    liveButton = document.querySelector('#btn-live');
     liveButton.onclick = discardPicture;
 
     uploadButton = document.querySelector('#btn-upload');
