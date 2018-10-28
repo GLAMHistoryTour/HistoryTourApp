@@ -8,8 +8,9 @@ window.onload = function () {
     tourTitle.innerHTML = tour.title;
     var image = document.createElement('img');
     image.classList.add("img-fluid");
-    image.src = tour.imageUrl
+    image.src = tour.imageUrl;
     image.innerHTML = tour.title;
+    image.style.marginBottom = "10px";
     var tourDescription = document.createElement('p');
     tourDescription.innerHTML = tour.description;
     document.querySelector('#content-column').appendChild(tourTitle);
