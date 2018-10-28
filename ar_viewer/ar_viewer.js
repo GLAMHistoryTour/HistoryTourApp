@@ -68,6 +68,9 @@ window.onload = function () {
     uploadButton.onclick = e => {
         takeASnap()
             .then(download);
+        var video = document.querySelector('video');
+        var infoText = document.querySelector('#info-text');
+        infoText.style.height = (infoText.clientHeight-48)+"px";
     };
 
     opacitySlider = document.querySelector('#slider-opacity');
