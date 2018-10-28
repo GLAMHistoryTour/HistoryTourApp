@@ -1,7 +1,7 @@
 {
     "imageUrl": "../img/landesmuseum.jpg",
     "title": "Demo tour",
-    "description": "This is a small tour to show our app works",
+    "description": "This is a small tour to show how our app works.",
     "steps": [
         {
             "name": "Landesmuseum",
