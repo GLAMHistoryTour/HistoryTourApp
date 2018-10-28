@@ -48,6 +48,9 @@ function initPosition(e) {
     me = L.circleMarker(coord).addTo(map).bindPopup("You are within " + radius + " meters from this point");
     me_radius = L.circle(coord, radius).addTo(map);
     map.panTo(coord);
+    //Fit range to markers
+    var group = new L.featureGroup(points.concat(me));
+    map.fitBounds(group.getBounds());
 }
 
 function updatePosition(e) {
