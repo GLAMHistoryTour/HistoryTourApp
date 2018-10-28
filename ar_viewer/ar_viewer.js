@@ -12,6 +12,7 @@ var liveButton;
 var opacitySlider;
 var canvas = null;
 var video;
+var currentStep;
 
 this.clientid = 'cc86a8de0e7c459';
 this.endpoint = 'https://api.imgur.com/3/image';
@@ -36,23 +37,18 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 window.onload = function () {
     var clipboard = new ClipboardJS('#btn-copy');
-    clipboard.on('success', function(e) {
+    clipboard.on('success', function (e) {
         console.log(e);
     });
-    var urlParams = new URLSearchParams(window.location.search);
+    loadJson();
     var overlayImage = document.querySelectorAll('.overlay');
-    var jsonPath = urlParams.get('json');
-    var request = new XMLHttpRequest();
-    request.open("GET", "../config/" + jsonPath, false);
-    request.send(null);
-    var jsonData = JSON.parse(request.responseText);
-    var currentStep = jsonData.steps[urlParams.get('step')];
     overlayImage.forEach(function (element) {
         element.src = currentStep.imageUrl;
     });
-    var infoText = document.querySelector('#info-text');
-    infoText.innerHTML = currentStep.description2;
-
+    if (currentStep.description2) {
+        var infoText = document.querySelector('#info-text');
+        infoText.innerHTML = currentStep.description2;
+    }
     screenshotButton = document.querySelector('#btn-capture');
     screenshotButton.onclick = takeScreenshot;
 
@@ -70,7 +66,7 @@ window.onload = function () {
     opacitySlider.oninput = opacityChanger;
 }
 
-function takeScreenshot(){
+function takeScreenshot() {
     canvas = document.querySelector('canvas');
     video = document.querySelector('video');
     var img = document.querySelector('#captured-image');
@@ -87,26 +83,32 @@ function takeScreenshot(){
     screenshotButton.disabled = true;
     uploadButton.disabled = false;
     liveButton.disabled = false;
+    if (currentStep.description3) {
+        var infoText = document.querySelector('#info-text');
+        infoText.innerHTML = currentStep.description3;
+    }
 }
 
-function takeASnap(){
-  return new Promise((res, rej)=>{
-    canvas.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
-  });
+function takeASnap() {
+    return new Promise((res, rej) => {
+        canvas.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
+    });
 }
 
-function download(blob){
-    var file = new Blob([blob], {type: 'image/jpeg'});
-  // uses the <a download> to download a Blob
-  /*let a = document.createElement('a'); 
-  a.href = URL.createObjectURL(blob);
-  a.download = 'screenshot.jpg';
-  document.body.appendChild(a);
-  a.click();*/
-  matchFiles(file);
+function download(blob) {
+    var file = new Blob([blob], {
+        type: 'image/jpeg'
+    });
+    // uses the <a download> to download a Blob
+    /*let a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'screenshot.jpg';
+    document.body.appendChild(a);
+    a.click();*/
+    matchFiles(file);
 }
 
-function matchFiles (file) {
+function matchFiles(file) {
     if (file.type.match(/image/) && file.type !== 'image/svg+xml') {
         document.body.classList.add('busy');
         var fd = new FormData();
@@ -120,35 +122,35 @@ function matchFiles (file) {
 }
 
 
-function post (path, data, callback) {
-            var xhttp = new XMLHttpRequest();
+function post(path, data, callback) {
+    var xhttp = new XMLHttpRequest();
 
-            xhttp.open('POST', path, true);
-            xhttp.setRequestHeader('Authorization', 'Client-ID ' + this.clientid);
-            xhttp.onreadystatechange = function () {
+    xhttp.open('POST', path, true);
+    xhttp.setRequestHeader('Authorization', 'Client-ID ' + this.clientid);
+    xhttp.onreadystatechange = function () {
 
-                if (this.readyState === 4) {
-                    if (this.status >= 200 && this.status < 300) {
-                        var response = '';
-                        try {
-                            response = JSON.parse(this.responseText);
-                            document.querySelector('#linkbox').hidden = false;
-                            document.querySelector('#link').href = response.data.link;
-                            document.querySelector('#btn-copy').dataset.clipboardText = response.data.link;
-                        } catch (err) {
-                            response = this.responseText;
-                        }
-                        callback.call(window, response);
-                    } else {
-                        throw new Error(this.status + " - " + this.statusText);
-                    }
+        if (this.readyState === 4) {
+            if (this.status >= 200 && this.status < 300) {
+                var response = '';
+                try {
+                    response = JSON.parse(this.responseText);
+                    document.querySelector('#linkbox').hidden = false;
+                    document.querySelector('#link').href = response.data.link;
+                    document.querySelector('#btn-copy').dataset.clipboardText = response.data.link;
+                } catch (err) {
+                    response = this.responseText;
                 }
-            };
-            xhttp.send(data);
-            xhttp = null;
+                callback.call(window, response);
+            } else {
+                throw new Error(this.status + " - " + this.statusText);
+            }
         }
+    };
+    xhttp.send(data);
+    xhttp = null;
+}
 
-function discardPicture(){
+function discardPicture() {
     var lifeViewContainer = document.querySelector('#life-view');
     var capturedImageContainer = document.querySelector('#captured-view');
     capturedImageContainer.style.display = 'none';
@@ -157,11 +159,25 @@ function discardPicture(){
     screenshotButton.disabled = false;
     uploadButton.disabled = true;
     liveButton.disabled = true;
+    if (currentStep.description2) {
+        var infoText = document.querySelector('#info-text');
+        infoText.innerHTML = currentStep.description2;
+    }
 }
 
-function opacityChanger(){
+function opacityChanger() {
     var overlayImage = document.querySelectorAll('.overlay');
     overlayImage.forEach(function (element) {
         element.style.opacity = 1 - (opacitySlider.value / 100);
     });
+}
+
+function loadJson() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var jsonPath = urlParams.get('json');
+    var request = new XMLHttpRequest();
+    request.open("GET", "../config/" + jsonPath, false);
+    request.send(null);
+    var jsonData = JSON.parse(request.responseText);
+    currentStep = jsonData.steps[urlParams.get('step')];
 }
