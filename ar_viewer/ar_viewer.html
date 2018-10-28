@@ -24,7 +24,7 @@
         </video>
                     </div>
                     <div id="captured-view" style="display: none;">
-                        <canvas style="display:none;"></canvas>
+                        <canvas style="display:none;" id="mycanvas"></canvas>
                         <img height="auto" id="captured-image">
                         <img height="auto" class="overlay">
                     </div>
@@ -46,9 +46,10 @@
             <div class="col-sm-12">
                 <p id="info-text"></p>
             </div>
-            <div class="col-sm-12" id="linkbox" hidden>
+            <div class="col-sm-12" id="linkbox">
                 <a id="link" target="_blank">Imgur Link</a>
                 <button class="btn" id="btn-copy" data-clipboard-text="TEST">Copy to clipboard</button>
+                <canvas style="display:none;" height="400px" id="myCanvas2"></canvas>
             </div>
         </div>
         <nav class="navbar fixed-bottom navbar-light bg-light" style="margin-bottom: 52px;">

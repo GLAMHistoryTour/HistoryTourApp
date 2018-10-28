@@ -73,7 +73,7 @@ window.onload = function () {
 }
 
 function takeScreenshot() {
-    canvas = document.querySelector('canvas');
+    canvas = document.querySelector('#mycanvas');
     video = document.querySelector('video');
     var img = document.querySelector('#captured-image');
     var lifeViewContainer = document.querySelector('#life-view');
@@ -93,11 +93,39 @@ function takeScreenshot() {
         var infoText = document.querySelector('#info-text');
         infoText.innerHTML = currentStep.description3;
     }
+    merge();
+}
+
+function merge() {
+    var c = document.querySelector("#myCanvas2");
+    var ctx = c.getContext("2d");
+    var imageObj1 = new Image();
+    var imageObj2 = new Image();
+    imageObj1.src = currentStep.imageUrl;
+
+    imageObj1.onload = function() {
+          imageObj2.src = "../img/braun.jpg";
+          imageObj2.onload = function() {
+            var img = c.toDataURL("image/png");
+            var im = document.querySelector('#captured-image');
+            var ration = (400/imageObj1.height);
+            var oldImageWidth = imageObj1.width*ration;
+            var nration = (400/im.height);
+            var newImageWidth = im.width*nration;
+            c.width = newImageWidth + oldImageWidth;
+            c.height = 400;
+
+            ctx.drawImage(imageObj1, 0, 0, oldImageWidth ,400);
+            ctx.drawImage(document.querySelector('#captured-image'), oldImageWidth, 0, newImageWidth, 400);
+       }
+    };
 }
 
 function takeASnap() {
     return new Promise((res, rej) => {
-        canvas.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
+
+        var canvasSnap = document.querySelector("#myCanvas2");
+        canvasSnap.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
     });
 }
 
@@ -105,12 +133,6 @@ function download(blob) {
     var file = new Blob([blob], {
         type: 'image/jpeg'
     });
-    // uses the <a download> to download a Blob
-    /*let a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'screenshot.jpg';
-    document.body.appendChild(a);
-    a.click();*/
     matchFiles(file);
 }
 
