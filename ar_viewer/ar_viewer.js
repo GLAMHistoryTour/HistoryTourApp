@@ -13,6 +13,7 @@ var opacitySlider;
 var canvas = null;
 var video;
 var currentStep;
+var jsonPath;
 
 this.clientid = 'cc86a8de0e7c459';
 this.endpoint = 'https://api.imgur.com/3/image';
@@ -54,6 +55,11 @@ window.onload = function () {
 
     liveButton = document.querySelector('#btn-live');
     liveButton.onclick = discardPicture;
+
+    var backButton = document.querySelector('#btn-continue');
+    backButton.onclick = function(){
+        window.location = "../map_viewer/map_viewer.html?json="+jsonPath;
+    };
 
     uploadButton = document.querySelector('#btn-upload');
     //uploadButton.onclick = test;
@@ -174,7 +180,7 @@ function opacityChanger() {
 
 function loadJson() {
     var urlParams = new URLSearchParams(window.location.search);
-    var jsonPath = urlParams.get('json');
+    jsonPath = urlParams.get('json');
     var request = new XMLHttpRequest();
     request.open("GET", "../config/" + jsonPath, false);
     request.send(null);
