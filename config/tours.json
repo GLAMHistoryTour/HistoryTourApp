@@ -2,20 +2,20 @@
     "tours": [
         {
             "url": "demo.json",
-            "title": "Demotour",
-            "description": "Demotour for Presentation",
+            "title": "Demo tour",
+            "description": "Demo tour for presentation",
             "time": "10 minutes"
         },
         {
             "url": "braun.json",
             "title": "Adolphe Braun",
-            "description": "Auf den Spuren von Adolphe Braun",
+            "description": "The birth of Swiss touristic photography",
             "time": "1 hour"
         },
         {
             "url": "seidenstrasse.json",
-            "title": "Zürcher Seidenstrasse",
-            "description": "Auf den Spuren der Seidenbaronen",
+            "title": "The Zurich silk road",
+            "description": "In the footsteps of the silk lords",
             "time": "1 hour"
         }
 ]

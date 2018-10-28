@@ -22,3 +22,7 @@
 .absolute-wrapper {
     position: relative;
 }
+
+#slider-row p{
+    margin-bottom: 10px;
+}
