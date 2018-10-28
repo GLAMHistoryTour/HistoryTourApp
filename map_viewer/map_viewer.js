@@ -79,7 +79,7 @@ function compareDistance(coord) {
             found = true;
             element.on('click', function (e) {
                 console.log('whoot');
-                window.location = "../ar_viewer/ar_viewer.html?json=" + findGetParameter('json') + "&step=" + element.step_nr;
+                window.location = "../metadata_viewer/metadata_viewer.html?json=" + findGetParameter('json') + "&step=" + element.step_nr;
             });
             document.querySelector("#footer").style.display = "inline";
 

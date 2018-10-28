@@ -6,62 +6,71 @@
         {
             "name": "St.Peter",
             "imageUrl": "../img/Braun_Zürich/DIG-41344_LM-17093910.jpg",
+            "metadata": "Braun Adolphe & Cie.  Zürich, Gesamtansicht von St. Peter aus, Zürichberg im Hintergrund. Inhalt: Stadtansicht Zürich. Fotograf/-in Braun, Ad. & Cie., Dornach i. Elsass, heute Mulhouse. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.371254",
             "longitude": "8.540738",
             "description": ""
         },
         {
             "name": "HB, bridge",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41348_LM-17093914.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41348_LM-17093914.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Hauptbahnhof vom Leonhardsplatz / Central über Bahnhofbrücke aus, rechts Escher-Wyss-Fabrik. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.376514",
             "longitude": "8.543996",
             "description": ""
         },
         {
             "name": "HB",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41349_LM-17093915.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41349_LM-17093915.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Hauptbahnhof Südwestflügel, im Hintergrund Polytechnikum. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.377347",
             "longitude": "8.538523",
             "description": ""
         },
         {
             "name": "HB",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41350_LM-17093916.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41350_LM-17093916.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Bahnhof mit Bahnhofbrücke. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.376811",
             "longitude": "8.541916",
             "description": ""
         },
         {
             "name": "from river bank",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41351_LM-17093917.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41351_LM-17093917.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Limmatquai mit Grossmünster, Helmhaus und Münsterbrücke (Quaibrücke fehlt noch). Um 1875 - 1882. [Sammlung Nationalmuseum]",
             "latitute": "47.37092",
             "longitude": "8.541905",
             "description": ""
         },
         {
             "name": "ETH",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41352_LM-17093918.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41352_LM-17093918.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Polytechnikum, Häuserzeile des Limmatquai im Vordergrund. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.372927",
             "longitude": "8.541385",
             "description": ""
         },
         {
             "name": "Quaibruecke",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Polytechnikum, Häuserzeile des Limmatquai im Vordergrund. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.367151",
             "longitude": "8.543912",
             "description": ""
         },
         {
             "name": "Bauschänzli",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "imageUrl": "../img/Braun_Zürich/DIG-41353_LM-17093919.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich von der kleinen Bauschanze / Bauschänzli gesehen, im Vordergrund Holzboote. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.367728",
             "longitude": "8.542461",
             "description": ""
         },
         {
             "name": "Hotel Storchen",
-            "imageUrl":  "../img/Braun_Zürich/DIG-41379_LM-1709398.jpg",
+            "metadata": "Braun Adolphe & Cie. Zürich, Limmatquai, Limmat und Münsterbrücke. Um 1875 - 1890. [Sammlung Nationalmuseum]",
+            "imageUrl": "../img/Braun_Zürich/DIG-41379_LM-1709398.jpg",
             "latitute": "47.371568",
             "longitude": "8.542007",
             "description": ""
