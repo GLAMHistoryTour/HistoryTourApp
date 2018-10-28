@@ -128,7 +128,8 @@ function post (path, data, callback) {
                         var response = '';
                         try {
                             response = JSON.parse(this.responseText);
-                            document.querySelector('#link').innerHTML = response.data.link;
+                            document.querySelector('#linkbox').hidden = false;
+                            document.querySelector('#link').href = response.data.link;
                             console.log(response.data.link);
 
                         } catch (err) {
