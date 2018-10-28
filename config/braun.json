@@ -9,7 +9,7 @@
             "metadata": "Braun Adolphe & Cie.  Zürich, Gesamtansicht von St. Peter aus, Zürichberg im Hintergrund. Inhalt: Stadtansicht Zürich. Fotograf/-in Braun, Ad. & Cie., Dornach i. Elsass, heute Mulhouse. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.371254",
             "longitude": "8.540738",
-            "description": ""
+            "description2": "The photo was made from the St.Peter church tower. Normally the tower is closed to the public, so today it is a bit complicated to have the same perspective. Nevertheless, the church is worth a visit. It is the Oldest Parish Church in Zurich and has the largest tower dial in Europe - 8.64 meters.  All public clocks of the city had to comply time with it. "
         },
         {
             "name": "HB, bridge",
@@ -17,7 +17,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Hauptbahnhof vom Leonhardsplatz / Central über Bahnhofbrücke aus, rechts Escher-Wyss-Fabrik. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.376514",
             "longitude": "8.543996",
-            "description": ""
+            "description2": "Where the machine factory of Escher-Wyss used to stand and coaches clattered over cobblestone pavements, today trams, and cars jam during rush hour. The picture was probably taken from the building where the Hotel Limmathof stands today. In the background, you can see then brand new main hall of the main station, which at that time was simply called Bahnhof Zürich because it was still the only one in the region."
         },
         {
             "name": "HB",
@@ -25,7 +25,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Hauptbahnhof Südwestflügel, im Hintergrund Polytechnikum. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.377347",
             "longitude": "8.538523",
-            "description": ""
+            "description2": "The main entrance of the main station is still directed to Bahnhofstrasse. At that time the station used to be on the outskirts of the city. It was enlarged and changed again and again. In the last 100 years, new buildings were erected on the Sihl, so that the station is no longer visible from the old photo location."
         },
         {
             "name": "HB",
@@ -33,7 +33,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Bahnhof mit Bahnhofbrücke. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.376811",
             "longitude": "8.541916",
-            "description": ""
+            "description2": "The photo was made from an island called Papierwerd (its name refers to the Zurich paper mill that stood on the island for centuries). The river Limmat forked in the past. In 1950, the drained Limmat arm was converted into an underpass; Papierwerd was no longer an island. Today cars are driving the Bahnhoffquai following the old rout of Limmat. "
         },
         {
             "name": "from river bank",
@@ -41,7 +41,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Limmatquai mit Grossmünster, Helmhaus und Münsterbrücke (Quaibrücke fehlt noch). Um 1875 - 1882. [Sammlung Nationalmuseum]",
             "latitute": "47.37092",
             "longitude": "8.541905",
-            "description": ""
+            "description2": "This photo was done from St.Peter church, so a view from this point shows a slightly different perspective. The main showplace is Grossmünster.  The twin towers are regarded as perhaps the most recognized landmark in Zürich. It also earned its historical significance as Huldrych Zwingli initiated the Swiss-German Reformation in Switzerland from his pastoral office at the Grossmünster."
         },
         {
             "name": "ETH",
@@ -49,7 +49,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Polytechnikum, Häuserzeile des Limmatquai im Vordergrund. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.372927",
             "longitude": "8.541385",
-            "description": ""
+            "description2": "The Lindenhof, from where the photo was taken, is still one of the most popular places from where you have a perfect view of the old town and the university buildings! The main building of the Swiss Federal Institute of Technology (ETH) which was built after the design of Gottfried Semper was completed in 1864.  When Adolphe Braun took his picture the University of Zurich (now to the right from ETH) was housed within the same building. In 1908, the city and canton of Zurich approved a new building for the university in a referendum.  Some of the buildings from the Braun's photo in front are still recognisable today."
         },
         {
             "name": "Quaibruecke",
@@ -57,7 +57,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich, Polytechnikum, Häuserzeile des Limmatquai im Vordergrund. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.367151",
             "longitude": "8.543912",
-            "description": ""
+            "description2": "Quay Bridge, where you are standing now, was built few years after Adolphe Braun made his picture. It was already one of the most beautiful views of the city back to 1870. Fraumünster, St.Peter, and Grossmünster (left to right) easily recognisable by the towers. Wasserkirche, Münsterbrücke, and Schifflände look still like they did when Adolphe Braun took his picture. "
         },
         {
             "name": "Bauschänzli",
@@ -65,7 +65,7 @@
             "metadata": "Braun Adolphe & Cie. Zürich von der kleinen Bauschanze / Bauschänzli gesehen, im Vordergrund Holzboote. Um 1875 - 1890. [Sammlung Nationalmuseum]",
             "latitute": "47.367728",
             "longitude": "8.542461",
-            "description": ""
+            "description2": "The picture was made from Bauschänzli that is one of the last remains of the Baroque fortifications of Zürich. On the left, there are still some of the old buildings of the Kratzquartier that was destroyed when the area of Bahnhofstrasse was newly erected."
         },
         {
             "name": "Hotel Storchen",
@@ -73,7 +73,7 @@
             "imageUrl": "../img/Braun_Zürich/DIG-41379_LM-1709398.jpg",
             "latitute": "47.371568",
             "longitude": "8.542007",
-            "description": ""
+            "description2": "The view did not change a lot since Adolphe Braun's visit. But wait, something has changed, right? Look at the name of the hotel. It seems that it changed its name from French \"Hotel de la Cigogne\" to its German version. Legend says the name was adopted after a pair of rare black storks nested on its roof. In 1357 the «Hus zum Storchen» was mentioned in the tax records for the city of Zürich for the first time and just over 100 years later, it was specifically described as an inn."
         }
     ]
 }
