@@ -25,7 +25,7 @@ navigator.mediaDevices.getUserMedia(constraints)
         video.onloadedmetadata = function (e) {
             video.play();
             var absoluteWrapper = document.querySelector('.absolute-wrapper');
-            var infoContent = document.querySelector('#info-content');
+            var infoContent = document.querySelector('#slider-row');
             infoContent.style.marginTop = video.offsetHeight + video.offsetTop + "px";
         };
 
