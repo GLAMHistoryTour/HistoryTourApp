@@ -1,21 +1,79 @@
 {
     "imageUrl": "../img/Stoff2.jpg",
     "title": "The Zurich silk road",
-    "description": "",
+    "description": "<h5>Welcome to the tour of the Zurich silk road!</h5>For many decades Zurich became famous for its silk industry. At the turn of the century Zurich was one of the most important industrial locations for all steps of the silk production. The Zurich silk industry operated in trading, silk planting, encapsulating and weaving. Zurich stands in a line with Lyon in France, Krefeld in Germany and Como in Italy. Until today the silk heritage is visible in the wealthy buildings, silk connected organisations and fashion labels and impressive textile collections. We invite you to visit some of the most important and impressive buildings connected to the Zurich silk industry and to see the city through the photographers eyes. Take the possibility and make an one-to-one comparison of what has changed. Go to the places on the map and have fun!",
     "steps": [
         {
-            "name":"First Place",
-            "imageUrl": "",
-            "latitute": "47.3",
-            "longitude": "8.531",
-            "description": ""
+            "name":"Landesmuseum",
+            "imageUrl": "../img/seidenTour/landesmuseum.jpeg",
+            "metadata": "Breitinger, Robert. [Landesmuseum. Thurm und Hauptfassade West]. [Zürich], [1898]. Zentralbibliothek Zürich, Graphische Sammlung",
+            "latitute": "47.37888889",
+            "longitude": "8.54055556",
+            "description1": "The Landesmuseum Zürich is one of the four museums of the Swiss National Museum. It was built between 1891 and 1898 by the young architect Gustav Gull. The castle-like building combines characteristics from different eras from the late middle ages to modern times. The Swiss National",
+            "description2": "All these little towers look kind of the same, don’t they? Do you manage to find the exact detail of the building that the picture shows ?"
         },
         {
-            "name":"Second Place",
-            "imageUrl": "",
-            "latitute": "47.388",
-            "longitude": "8.531449499999999",
-            "description": ""
+            "name":"Seidenwebschule",
+            "imageUrl": "../img/seidenTour/seidenwebschule_wasserwerkstrasse.jpeg",
+            "metadata": "Breitinger, Robert. [Seidenwebschule]. [Zürich], [1887]. Zentralbibliothek Zürich, Graphische Sammlung",
+            "latitute": "47.386984",
+            "longitude": "8.531097",
+            "description1": "This is the <a href=\"https://de.wikipedia.org/wiki/Seidenwebschule_Z%C3%BCrich\">silk weaving school Zurich</a>. It was founded in 1881 as a competence and training center of the Zurich silk industry. Junior technicians, designers and even managing directors were trained here to learn about the different silks, about the market and about price and pattern making. 1944 the school merged in the Schweizerische Textilfachschule. ",
+            "description2": "This is the climbing part of the tour! Don't worry, it won't get harder than this. Do you dare to descend the riverbank until you find the right perspective?"
+        },
+        {
+            "name":"Zunft zum Saffran",
+            "imageUrl": "../img/seidenTour/zunfthaus_zur_saffran.jpg",
+            "metadata": "Gut, Jean. Saffran. Zürich, 1885. ETH Zürich, Baugeschichtliches Archiv",
+            "latitute": "47.37146389",
+            "longitude": "8.542961",
+            "description1": "In the 18th century, the stately <a href=\"https://www.zunfthauszursaffran.ch\">Zunfthaus zur Saffran</a> on Limmatquai opposite <a href=\"https://de.wikipedia.org/wiki/Rathaus_(Zürich)\"></a> was built. In the tradition of the guilds, nothing was spared in furnishing the house, the event location in the middle of Zurich continues.",
+            "description2": "Do you manage to get the street and the roof into the picture at the same time as Breitinger did? It's not so easy, is ist? Where do you think Breitinger took this picture from?"
+        },
+        {
+            "name":"Quaibrücke",
+            "imageUrl": "../img/seidenTour/quaibruecke.jpeg",
+            "metadata": "Breitinger, Robert. [Quaibrücke v. See aufg. ohne Knabe]. [Zürich], [1891]. Zentralbibliothek Zürich, Graphische Sammlung",
+            "latitute": "47.356645",
+            "longitude": "8.542751",
+            "description1": "In the beginning it was just a bold idea: to build a bridge over the Limmat between Bellevue and Bürkliplatz. Until the  <a href=\"https://de.wikipedia.org/wiki/Quaibrücke\">Quaibrücke</a> reached its present form, it was moved, widened, rebuilt - and armed.",
+            "description2": "Now here's a challenging picture - it was taken from on the lake (which was no problem then because it was covered with ice).. What will YOU do? Will you rent a pedalo boat? If you don't want to do that, never mind! Why don't you just take a selfie from the Quaibrücke itself? We're looking forward to see your picture!"
+        },
+        {
+            "name":"General Guisan Quai",
+            "imageUrl": "../img/seidenTour/zuerichseemitschiffstandhasler_buerkliplatz.jpeg",
+            "metadata": "Breitinger, Robert. [Zürichsee. m. Schiffstand Hasler]. [Zürich], [1891]. Zentralbibliothek Zürich, Graphische Sammlung",
+            "latitute": "47.356645",
+            "longitude": "8.542751",
+            "description1": "This picture was taken when the lake was frozen. In the background you see the Opera house under construction, Utoquai, Neumünster, factory building of the silk dyeing plant, Badanstalt. The location of the silk dyeing factory was chosen because the shore is steep and the water remains clear even during storms. The first steam boiler was installed in 1849 and electric lighting was introduced in 1885. During its heyday up to 125 people were employed.",
+            "description2": "Do you manage to get the same view on the picture as Breitinger did? The builings on the lakeside look so different today... Breitinger cheated, too, by stepping onto the frozen lake! Where will YOU take your picture from?"
+        },
+        {
+            "name":"Strehlgasse 26",
+            "imageUrl": "../img/seidenTour/strehlgasse26_ensoie.jpg",
+            "metadata": "Haus «Kleines Kindli». Zürich, 1930. ETH Zürich, Baugeschichtliches Archiv",
+            "latitute": "47.372260",
+            "longitude": "8.540284",
+            "description1": "Welcome to the house <a href=\"https://en.wikipedia.org/wiki/Kindli_(hotel)\">\"Zum kleinen Kindli\"</a>, where guests have been set in since 500 years. The oldest parts of the foundation walls date back to the 14th century! Since 1984 the house harbours also the exquisite shop of the Swiss label <a href=\"https://ensoie.com/\">enSoie</a> which origins from the Zurich silk company. <a href=\"https://de.wikipedia.org/wiki/Ludwig_Abraham_%26_Co\">Rudolf Brauchbar & Co</a>. Don’t miss the magnificent three-dimensional stucco room from the end of the 17th century in the first floor. It is one of the most beautiful in the country.",
+            "description2": "After your climbing and boat adventures, this one must seem really easy to you - go for it! On which side of the trash bin are you standing?"
+        },
+        {
+            "name":"Grieder",
+            "imageUrl": "../img/seidenTour/bahnhofsstrasse30_grieder.jpg",
+            "metadata": "Bahnhofstrassse 30. Zürich, 1943. ETH Zürich, Baugeschichtliches Archiv",
+            "latitute": "47.370028",
+            "longitude": "8.539222",
+            "description1": "In 1913 the <a href=\"https://www.bongenie-grieder.ch/de/?gclid=EAIaIQobChMI3OjQ0pqn3gIVGqaaCh0ZzwtQEAAYASAAEgIdBPD_BwE\">Grieder</a> opened and became the most important fashion boutique with Zurich silks. Back in the times Grieder offered Crêpe de Chine in 375 colours to tailor everything from gowns to ties. Today the boutique still hosts couture fashion brands.",
+            "description2": "Are you on the traffic island yet? Careful! As you approach the right perspective, the island is getting narrower. Watch out for the tramway!"
+        },
+        {
+            "name":"Seidentrockungsanstalt",
+            "imageUrl": "../img/seidenTour/gotthardstrasse61.jpg",
+            "metadata": "Kein Titel. Zürich, um 1931. Zürich, Baugeschichtliches Archiv",
+            "latitute": "47.365322",
+            "longitude": "8.532724",
+            "description1": "In 1932 Switzerland's first <a href=\"http://dx.doi.org/10.5169/seals-48269\">silk drying plant</a> moved into the noble building from architect Oskar Walz at the Gotthardstrasse 61. The drying plant was very important for the Zurich silk industry to keep up with the international competition from Italy, France and Germany. Up to today the building hosts the Testex, a Swiss testing and certification organization for textiles.",
+            "description2": "Somehow you're standing on the right spot, but shouldn't you be higher up? It's a shame you can't enter the building behind you! Which floor do you think the photographer took the picture from?"
         }
     ]
 }
