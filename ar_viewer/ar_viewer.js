@@ -35,6 +35,10 @@ navigator.mediaDevices.getUserMedia(constraints)
     }); // always check for errors at the end.
 
 window.onload = function () {
+    var clipboard = new ClipboardJS('#btn-copy');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
     var urlParams = new URLSearchParams(window.location.search);
     var overlayImage = document.querySelectorAll('.overlay');
     var jsonPath = urlParams.get('json');
@@ -130,8 +134,7 @@ function post (path, data, callback) {
                             response = JSON.parse(this.responseText);
                             document.querySelector('#linkbox').hidden = false;
                             document.querySelector('#link').href = response.data.link;
-                            console.log(response.data.link);
-
+                            document.querySelector('#btn-copy').dataset.clipboardText = response.data.link;
                         } catch (err) {
                             response = this.responseText;
                         }
