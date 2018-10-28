@@ -27,8 +27,10 @@ navigator.mediaDevices.getUserMedia(constraints)
         video.onloadedmetadata = function (e) {
             video.play();
             var absoluteWrapper = document.querySelector('.absolute-wrapper');
-            var infoContent = document.querySelector('#slider-row');
-            infoContent.style.marginTop = video.offsetHeight + video.offsetTop + "px";
+            var sliderComponent = document.querySelector('#slider-row');
+            sliderComponent.style.marginTop = video.offsetHeight + video.offsetTop + "px";
+            var infoText = document.querySelector('#info-text');
+            infoText.style.height = document.documentElement.clientHeight - 154 - (video.offsetHeight + video.offsetTop)+"px";
         };
 
     })
