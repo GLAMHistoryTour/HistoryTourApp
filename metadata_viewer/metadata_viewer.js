@@ -15,6 +15,10 @@ window.onload = function () {
     if (currentStep.description1 != null) {
         infoData.innerHTML = currentStep.description1;
     }
+    window.setTimeout(function(){    var imageFigure = document.querySelector("#figure-col");
+    var infoBlock = document.querySelector("#info-block");
+    infoBlock.style.height = document.documentElement.clientHeight-(imageFigure.offsetHeight + 65) +"px";}, 100);
+
 };
 
 function loadJsonData() {

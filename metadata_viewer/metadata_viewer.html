@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="metadata_viewer.js"></script>
@@ -10,8 +9,8 @@
 <body>
     <div class="container-fluid" style="margin-top: 10px;">
         <div class="row">
-            <div class="col-sm">
-                <figure class="figure">
+            <div class="col-sm" id="figure-col">
+                <figure class="figure" id="image-figure">
                     <img class="img-fluid figure-img" id="historic-image">
                     <figcaption class="figure-caption" id="data-info"></figcaption>
                 </figure>
@@ -19,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-sm">
-                <p id="info-block"></p>
+                <p id="info-block" style="overflow-y: auto;"></p>
             </div>
         </div>
         <nav class="navbar fixed-bottom navbar-light bg-light">
