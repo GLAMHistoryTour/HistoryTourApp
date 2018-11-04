@@ -111,7 +111,7 @@ function loadTour(jsonPath) {
 
     markers.forEach(function (element, i) {
         if (element.requested_radius == null) {
-            element.requested_radius = 10;
+            element.requested_radius = 20;
         }
         var marker = L.marker([element.latitute, element.longitude]).addTo(map);
         L.circle([element.latitute, element.longitude], element.requested_radius).addTo(map);

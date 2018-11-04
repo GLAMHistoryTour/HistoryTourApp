@@ -34,8 +34,9 @@
             "name":"Quaibrücke",
             "imageUrl": "../img/seidenTour/quaibruecke.jpeg",
             "metadata": "Breitinger, Robert. [Quaibrücke v. See aufg. ohne Knabe]. [Zürich], [1891]. Zentralbibliothek Zürich, Graphische Sammlung",
-            "latitute": "47.356645",
-            "longitude": "8.542751",
+            "latitute": "47.366880",
+            "longitude": "8.543036",
+            "requested_radius":50,
             "description1": "In the beginning it was just a bold idea: to build a bridge over the Limmat between Bellevue and Bürkliplatz. Until the  <a href=\"https://de.wikipedia.org/wiki/Quaibrücke\">Quaibrücke</a> reached its present form, it was moved, widened, rebuilt - and armed.",
             "description2": "Now here's a challenging picture - it was taken from on the lake (which was no problem then because it was covered with ice).. What will YOU do? Will you rent a pedalo boat? If you don't want to do that, never mind! Why don't you just take a selfie from the Quaibrücke itself? We're looking forward to see your picture!"
         },
@@ -43,8 +44,9 @@
             "name":"General Guisan Quai",
             "imageUrl": "../img/seidenTour/zuerichseemitschiffstandhasler_buerkliplatz.jpeg",
             "metadata": "Breitinger, Robert. [Zürichsee. m. Schiffstand Hasler]. [Zürich], [1891]. Zentralbibliothek Zürich, Graphische Sammlung",
-            "latitute": "47.356645",
-            "longitude": "8.542751",
+            "latitute": "47.361588",
+            "longitude": "8.540133",
+            "requested_radius":500,
             "description1": "This picture was taken when the lake was frozen. In the background you see the Opera house under construction, Utoquai, Neumünster, factory building of the silk dyeing plant, Badanstalt. The location of the silk dyeing factory was chosen because the shore is steep and the water remains clear even during storms. The first steam boiler was installed in 1849 and electric lighting was introduced in 1885. During its heyday up to 125 people were employed.",
             "description2": "Do you manage to get the same view on the picture as Breitinger did? The builings on the lakeside look so different today... Breitinger cheated, too, by stepping onto the frozen lake! Where will YOU take your picture from?"
         },
